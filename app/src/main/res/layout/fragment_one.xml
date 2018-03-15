@@ -13,4 +13,23 @@ xmlns:tools="http://schemas.android.com/tools"
         android:src="@mipmap/zhujue"
         android:scaleType="fitXY"/>
 
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="80dp"
+        android:text="与天争锋"
+        android:textSize="25dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="150dp"
+        android:text="LV99"
+        android:textSize="25dp"
+        android:textAlignment="center"/>
+
+    
 </FrameLayout>
