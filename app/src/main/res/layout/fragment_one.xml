@@ -31,5 +31,27 @@ xmlns:tools="http://schemas.android.com/tools"
         android:textSize="25dp"
         android:textAlignment="center"/>
 
-    
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:progress="50"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="270dp"/>
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:progress="30"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="320dp"/>
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:progress="85"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="370dp"/>
 </FrameLayout>
