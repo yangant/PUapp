@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_task:
                         mainActivityViewPager.setCurrentItem(1);
                         break;
+                    case R.id.navigation_rank:
+                        mainActivityViewPager.setCurrentItem(2);
+                        break;
 
                 }
                 // true 会显示这个Item被选中的效果 false 则不会
