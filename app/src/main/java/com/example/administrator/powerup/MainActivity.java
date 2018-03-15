@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 //        为Adapter添加Fragment
         adapter.addFragment(new BlankFragmentOne());
         adapter.addFragment(new BlankFragmentTwo());
+        adapter.addFragment(new BlankFragmentThree());
         mainActivityViewPager.setAdapter(adapter);
 //        为 BottomNavigationView 的菜单项  设置监听事件
         bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
