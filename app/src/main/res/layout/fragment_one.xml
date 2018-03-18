@@ -54,7 +54,7 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="8dp"
         android:progress="85"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="435dp"
         android:progressDrawable="@drawable/progress_drawable"/>
 
     <TextView
@@ -82,7 +82,7 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="wrap_content"
         android:text="魅力值"
         android:textColor="#FFFF"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="415dp"
         android:layout_marginLeft="280dp"
         android:textSize="12dp"/>
 
