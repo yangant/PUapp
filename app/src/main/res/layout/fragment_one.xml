@@ -13,20 +13,21 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="90dp"
         android:text="与天争锋"
-        android:textSize="20dp"
+        android:textSize="25dp"
         android:textColor="#FFFF"
-        android:fontFamily="@font/catoon"
+        android:fontFamily="@font/bigblack"
         android:ems="1"
         android:textAlignment="center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="290dp"
+        android:layout_marginLeft="250dp"
         android:layout_marginTop="240dp"
         android:text="LV99"
         android:textSize="20dp"
         android:textColor="#66CD00"
+        android:fontFamily="@font/bigblack"
         android:textAlignment="center"/>
 
     <ProgressBar
