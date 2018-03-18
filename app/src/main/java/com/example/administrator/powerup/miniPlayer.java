@@ -9,7 +9,8 @@ public class miniPlayer {
     private int p_data;
 
     miniPlayer(String name, int data) {
-
+        p_name = name;
+        p_data = data;
     }
 
     public  void setP_name(String name) {
