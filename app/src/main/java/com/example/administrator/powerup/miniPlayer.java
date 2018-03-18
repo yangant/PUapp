@@ -8,6 +8,10 @@ public class miniPlayer {
     private String p_name;
     private int p_data;
 
+    miniPlayer(String name, int data) {
+
+    }
+
     public  void setP_name(String name) {
         p_name = name;
     }
