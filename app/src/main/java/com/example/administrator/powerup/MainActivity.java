@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     ViewPager mainActivityViewPager;
     BottomNavigationView bottomNavView;
     MainActivityViewPagerAdapter adapter;
-    TextView playerID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
 //        获取到两个控件的对象
         mainActivityViewPager = (ViewPager) findViewById(R.id.main_viewpager);
         bottomNavView = (BottomNavigationView) findViewById(R.id.main_bottom_nav_view);
-        playerID = (TextView) findViewById(R.id.playerID);
-        playerID.setText(LogInActivity.myPlayer.getPlayer_name());
 //        为ViewPager设置Adapter
         adapter = new MainActivityViewPagerAdapter(getSupportFragmentManager());
 //        为Adapter添加Fragment
