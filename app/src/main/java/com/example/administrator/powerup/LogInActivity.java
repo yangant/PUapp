@@ -11,7 +11,7 @@ public class LogInActivity extends AppCompatActivity {
     private EditText intput_name;
     private EditText input_password;
     private Button loginbutton;
-    public Player myPlayer;
+    public static Player myPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

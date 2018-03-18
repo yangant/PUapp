@@ -7,12 +7,13 @@ xmlns:tools="http://schemas.android.com/tools"
 
 
     <TextView
+        android:id="@+id/playerID"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="105dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="90dp"
         android:text="与天争锋"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textColor="#FFFF"
         android:ems="1"
         android:textAlignment="center"/>
@@ -20,8 +21,8 @@ xmlns:tools="http://schemas.android.com/tools"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="310dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="240dp"
         android:text="LV99"
         android:textSize="20dp"
         android:textColor="#66CD00"

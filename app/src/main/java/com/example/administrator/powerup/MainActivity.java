@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager mainActivityViewPager;
     BottomNavigationView bottomNavView;
     MainActivityViewPagerAdapter adapter;
+    TextView playerID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
 //        获取到两个控件的对象
         mainActivityViewPager = (ViewPager) findViewById(R.id.main_viewpager);
         bottomNavView = (BottomNavigationView) findViewById(R.id.main_bottom_nav_view);
+        playerID = (TextView) findViewById(R.id.playerID);
+        playerID.setText(LogInActivity.myPlayer.getPlayer_name());
 //        为ViewPager设置Adapter
         adapter = new MainActivityViewPagerAdapter(getSupportFragmentManager());
 //        为Adapter添加Fragment
