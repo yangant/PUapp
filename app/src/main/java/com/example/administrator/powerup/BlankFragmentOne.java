@@ -22,7 +22,7 @@ public class BlankFragmentOne extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Typeface typeFace1 = Typeface.createFromFile("font/Campus A.tff");
+        Typeface typeFace1 = Typeface.createFromFile("font/catoon.tff");
         TextView plaerID = (TextView) getView().findViewById(R.id.playerID);
         plaerID.setText(LogInActivity.myPlayer.getPlayer_name());
         plaerID.setTypeface(typeFace1);
