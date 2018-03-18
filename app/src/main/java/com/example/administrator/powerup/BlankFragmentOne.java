@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.graphics.Typeface;
 
 public class BlankFragmentOne extends Fragment {
     @Nullable
@@ -22,10 +21,8 @@ public class BlankFragmentOne extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Typeface typeFace1 = Typeface.createFromFile("font/catoon.tff");
         TextView plaerID = (TextView) getView().findViewById(R.id.playerID);
         plaerID.setText(LogInActivity.myPlayer.getPlayer_name());
-        plaerID.setTypeface(typeFace1);
     }
 
 }

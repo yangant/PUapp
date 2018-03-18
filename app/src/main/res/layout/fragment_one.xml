@@ -15,6 +15,7 @@ xmlns:tools="http://schemas.android.com/tools"
         android:text="与天争锋"
         android:textSize="20dp"
         android:textColor="#FFFF"
+        android:fontFamily="@font/catoon"
         android:ems="1"
         android:textAlignment="center"/>
 
