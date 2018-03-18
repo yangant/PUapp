@@ -45,7 +45,7 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="8dp"
         android:progress="30"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="370dp"
         android:progressDrawable="@drawable/progress_drawable"/>
 
     <ProgressBar
@@ -72,7 +72,7 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="wrap_content"
         android:text="智力值"
         android:textColor="#FFFF"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="350dp"
         android:layout_marginLeft="280dp"
         android:textSize="12dp"/>
 
