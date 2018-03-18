@@ -3,295 +3,279 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/beijing1">
+    android:background="@mipmap/beijingthree">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginTop="114dp"
+        android:layout_marginLeft="34dp"
+        android:layout_width="316dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ems="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="25dp"
+            android:textColor="#7D26CD"
+            android:text="武力榜"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="排行榜"
-                android:textSize="30dp"
-                android:textColor="#EE0000"
-                android:textAlignment="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:orientation="vertical"
-            android:background="@mipmap/yangpi">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="武力榜"
-                android:textSize="25dp"
-                android:textColor="#4876FF"
-                android:textAlignment="center"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="30dp">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      1、烟雨江南"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:text="一苇渡江"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:layout_marginLeft="30dp"
+                    android:text="90"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      2、一苇渡江"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:text="七剑下天山"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:layout_marginLeft="30dp"
+                    android:text="88"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      3、拂袖红尘"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:text="八仙过海"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:orientation="vertical"
-            android:background="@mipmap/yangpi">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="智力榜"
-                android:textSize="25dp"
-                android:textColor="#4876FF"
-                android:textAlignment="center"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      1、烟雨江南"
-                    android:textSize="20dp"
-                    android:textColor="#4876FF" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="90"
-                    android:textSize="20dp"
-                    android:textColor="#4876FF" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      2、一苇渡江"
-                    android:textSize="20dp"
-                    android:textColor="#4876FF" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="88"
-                    android:textSize="20dp"
-                    android:textColor="#4876FF" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      3、拂袖红尘"
-                    android:textSize="20dp"
-                    android:textColor="#4876FF" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="70"
-                    android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:layout_marginLeft="30dp"
+                    android:text="70"/>
 
             </LinearLayout>
 
         </LinearLayout>
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="234dp"
+        android:layout_marginLeft="34dp"
+        android:layout_width="316dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ems="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="25dp"
+            android:textColor="#1874CD"
+            android:text="智力榜"/>
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:orientation="vertical"
-            android:background="@mipmap/yangpi">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="魅力榜"
-                android:textSize="25dp"
-                android:textColor="#4876FF"
-                android:textAlignment="center"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="30dp">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      1、烟雨江南"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:text="一苇渡江"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:layout_marginLeft="30dp"
+                    android:text="90"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      2、一苇渡江"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:text="七剑下天山"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:layout_marginLeft="30dp"
+                    android:text="88"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:text="      3、拂袖红尘"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:text="八仙过海"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:textColor="#4876FF" />
+                    android:layout_marginLeft="30dp"
+                    android:text="70"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="354dp"
+        android:layout_marginLeft="34dp"
+        android:layout_width="316dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ems="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="25dp"
+            android:textColor="#FF7F24"
+            android:text="魅力榜"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="一苇渡江"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="90"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="七剑下天山"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="88"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="八仙过海"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="70"/>
 
             </LinearLayout>
 
