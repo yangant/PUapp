@@ -37,15 +37,15 @@ public class BlankFragmentOne extends Fragment {
         int powerLevel = LogInActivity.myPlayer.getPlayer_power()/10;
         int powerNumber = LogInActivity.myPlayer.getPlayer_power() - powerLevel*10;
         powerbar.setProgress(powerNumber*10);
-        powerlevel.setText(powerLevel);
+        powerlevel.setText(Integer.toString(powerLevel));
         int intellLevel = LogInActivity.myPlayer.getPlayer_intelligence()/10;
         int intellNumber = LogInActivity.myPlayer.getPlayer_intelligence() - intellLevel*10;
         intellbar.setProgress(intellNumber*10);
-        intelllevel.setText(intellLevel);
+        intelllevel.setText(Integer.toString(intellLevel));
         int charmLevel = LogInActivity.myPlayer.getPlayer_charm()/10;
         int charmNumber = LogInActivity.myPlayer.getPlayer_charm() - charmLevel*10;
         charmbar.setProgress(charmNumber*10);
-        charmlevel.setText(charmLevel);
+        charmlevel.setText(Integer.toString(charmLevel));
     }
 
 }
