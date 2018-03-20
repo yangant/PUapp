@@ -48,7 +48,7 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="6dp"
         android:progress="30"
         android:layout_marginLeft="91dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="371dp"
         android:progressDrawable="@drawable/progress_drawable"/>
 
     <ProgressBar
@@ -58,7 +58,7 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="6dp"
         android:progress="85"
         android:layout_marginLeft="91dp"
-        android:layout_marginTop="437dp"
+        android:layout_marginTop="436dp"
         android:progressDrawable="@drawable/progress_drawable"/>
 
     <TextView
