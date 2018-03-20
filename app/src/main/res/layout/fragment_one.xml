@@ -42,18 +42,18 @@ xmlns:tools="http://schemas.android.com/tools"
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="232dp"
-        android:layout_height="8dp"
+        android:layout_height="6dp"
         android:progress="30"
-        android:layout_marginLeft="90dp"
+        android:layout_marginLeft="91dp"
         android:layout_marginTop="370dp"
         android:progressDrawable="@drawable/progress_drawable"/>
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="232dp"
-        android:layout_height="8dp"
+        android:layout_height="6dp"
         android:progress="85"
-        android:layout_marginLeft="90dp"
+        android:layout_marginLeft="91dp"
         android:layout_marginTop="435dp"
         android:progressDrawable="@drawable/progress_drawable"/>
 
