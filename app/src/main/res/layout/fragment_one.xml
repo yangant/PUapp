@@ -90,5 +90,38 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_marginLeft="280dp"
         android:textSize="12dp"/>
 
+    <TextView
+        android:id="@+id/powerlevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textSize="20dp"
+        android:layout_marginTop="283dp"
+        android:layout_marginLeft="60dp"
+        android:fontFamily="@font/bigblack"
+        android:textColor="#FFFF"/>
+
+    <TextView
+        android:id="@+id/intelllevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textSize="20dp"
+        android:layout_marginTop="355dp"
+        android:layout_marginLeft="60dp"
+        android:fontFamily="@font/bigblack"
+        android:textColor="#FFFF"/>
+
+    <TextView
+        android:id="@+id/charmlevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textSize="20dp"
+        android:layout_marginTop="419dp"
+        android:layout_marginLeft="60dp"
+        android:fontFamily="@font/bigblack"
+        android:textColor="#FFFF"/>
+
 
 </FrameLayout>
