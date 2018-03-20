@@ -33,12 +33,9 @@ public class LogInActivity extends AppCompatActivity {
         miniPlayer myself_c = new miniPlayer(myPlayer.getPlayer_name(), myPlayer.getPlayer_charm());
         myPlayer.addPowerrank(myself_p);
         myPlayer.addPowerrank(myself_p);
-        myPlayer.addPowerrank(myself_p);
         myPlayer.addIntelligencerank(myself_i);
         myPlayer.addIntelligencerank(myself_i);
         myPlayer.addIntelligencerank(myself_i);
-        myPlayer.addCharmrank(myself_c);
-        myPlayer.addCharmrank(myself_c);
         myPlayer.addCharmrank(myself_c);
         Intent intent = new Intent(LogInActivity.this, MainActivity.class);
         startActivity(intent);
