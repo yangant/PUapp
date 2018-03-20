@@ -6,8 +6,24 @@
     android:background="@mipmap/beijing1">
 
     <TextView
+        android:text="任务"
+        android:fontFamily="@font/bigblack"
+        android:textSize="30dp"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello_blank_fragment_two" />
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"></ListView>
+
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </FrameLayout>
