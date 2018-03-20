@@ -36,12 +36,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/p_name_one"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="一苇渡江"/>
 
                 <TextView
+                    android:id="@+id/p_number_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
@@ -58,12 +60,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/p_name_two"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="七剑下天山"/>
 
                 <TextView
+                    android:id="@+id/p_number_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
@@ -80,12 +84,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/p_name_three"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="八仙过海"/>
 
                 <TextView
+                    android:id="@+id/p_number_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
@@ -130,12 +136,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/i_name_one"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="一苇渡江"/>
 
                 <TextView
+                    android:id="@+id/i_number_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
@@ -152,12 +160,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/i_name_two"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="七剑下天山"/>
 
                 <TextView
+                    android:id="@+id/i_number_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
@@ -174,12 +184,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/i_name_three"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="八仙过海"/>
 
                 <TextView
+                    android:id="@+id/i_number_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
@@ -224,12 +236,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/c_name_one"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="一苇渡江"/>
 
                 <TextView
+                    android:id="@+id/c_number_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
@@ -246,12 +260,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/c_name_two"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="七剑下天山"/>
 
                 <TextView
+                    android:id="@+id/c_number_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
@@ -268,12 +284,14 @@
                 android:layout_marginLeft="30dp">
 
                 <TextView
+                    android:id="@+id/c_name_three"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:text="八仙过海"/>
 
                 <TextView
+                    android:id="@+id/c_number_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
