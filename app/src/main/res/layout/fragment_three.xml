@@ -110,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:ems="1"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginLeft="25dp"
             android:textSize="25dp"
             android:textColor="#1874CD"
@@ -126,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp">
 
                 <TextView
@@ -170,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginLeft="30dp">
 
                 <TextView
