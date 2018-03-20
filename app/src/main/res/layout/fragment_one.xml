@@ -32,6 +32,7 @@ xmlns:tools="http://schemas.android.com/tools"
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/powerbar"
         android:layout_width="232dp"
         android:layout_height="6dp"
         android:progress="50"
@@ -41,20 +42,22 @@ xmlns:tools="http://schemas.android.com/tools"
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/intellbar"
         android:layout_width="232dp"
         android:layout_height="6dp"
         android:progress="30"
         android:layout_marginLeft="91dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="368dp"
         android:progressDrawable="@drawable/progress_drawable"/>
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/charmbar"
         android:layout_width="232dp"
         android:layout_height="6dp"
         android:progress="85"
         android:layout_marginLeft="91dp"
-        android:layout_marginTop="435dp"
+        android:layout_marginTop="433dp"
         android:progressDrawable="@drawable/progress_drawable"/>
 
     <TextView
