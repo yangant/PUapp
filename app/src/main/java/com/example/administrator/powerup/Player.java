@@ -107,6 +107,6 @@ public class Player {
     }
 
     public int getLevel() {
-        return 1;
+        return ((player_charm+player_intelligence+player_power)/30+1);
     }
 }
