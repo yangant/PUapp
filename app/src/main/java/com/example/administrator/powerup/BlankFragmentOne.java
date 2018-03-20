@@ -21,6 +21,7 @@ public class BlankFragmentOne extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        //界面元素关联数据
         TextView plaerID = (TextView) getView().findViewById(R.id.playerID);
         plaerID.setText(LogInActivity.myPlayer.getPlayer_name());
     }
