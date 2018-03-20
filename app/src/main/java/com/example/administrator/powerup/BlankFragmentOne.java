@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class BlankFragmentOne extends Fragment {
@@ -25,8 +26,20 @@ public class BlankFragmentOne extends Fragment {
         TextView plaerID = (TextView) getView().findViewById(R.id.playerID);
         plaerID.setText(LogInActivity.myPlayer.getPlayer_name());
         TextView level = (TextView) getView().findViewById(R.id.level);
-        String lv = "LV" + LogInActivity.myPlayer.getLevel();
+        String lv = "LV " + LogInActivity.myPlayer.getLevel();
         level.setText(lv);
+        ProgressBar powerbar = (ProgressBar) getView().findViewById(R.id.powerbar);
+        ProgressBar intellbar = (ProgressBar) getView().findViewById(R.id.intellbar);
+        ProgressBar charmbar = (ProgressBar) getView().findViewById(R.id.charmbar);
+        int powerLevel = LogInActivity.myPlayer.getPlayer_power()/10;
+        int powerNumber = LogInActivity.myPlayer.getPlayer_power() - powerLevel*10;
+        powerbar.setProgress(powerNumber*10);
+        int intellLevel = LogInActivity.myPlayer.getPlayer_intelligence()/10;
+        int intellNumber = LogInActivity.myPlayer.getPlayer_intelligence() - intellLevel*10;
+        intellbar.setProgress(intellNumber*10);
+        int charmLevel = LogInActivity.myPlayer.getPlayer_charm()/10;
+        int charmNumber = LogInActivity.myPlayer.getPlayer_charm() - charmLevel*10;
+        charmbar.setProgress(charmNumber*10);
     }
 
 }
