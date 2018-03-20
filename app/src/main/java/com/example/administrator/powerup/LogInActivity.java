@@ -25,9 +25,9 @@ public class LogInActivity extends AppCompatActivity {
         myPlayer = new Player();
         myPlayer.setPlayer_name(intput_name.getText().toString());
         myPlayer.setPlayer_password(input_password.getText().toString());
-        myPlayer.setPlayer_charm(55);
-        myPlayer.setPlayer_power(33);
-        myPlayer.setPlayer_intelligence(66);
+        myPlayer.setPlayer_charm(0);
+        myPlayer.setPlayer_power(0);
+        myPlayer.setPlayer_intelligence(0);
         Intent intent = new Intent(LogInActivity.this, MainActivity.class);
         startActivity(intent);
     }
