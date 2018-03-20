@@ -6,8 +6,8 @@
     android:background="@mipmap/beijingthree">
 
     <LinearLayout
-        android:layout_marginTop="114dp"
-        android:layout_marginLeft="34dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginLeft="32dp"
         android:layout_width="316dp"
         android:layout_height="104dp"
         android:orientation="horizontal">
@@ -99,8 +99,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="234dp"
-        android:layout_marginLeft="34dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginLeft="32dp"
         android:layout_width="316dp"
         android:layout_height="104dp"
         android:orientation="horizontal">
@@ -192,8 +192,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="354dp"
-        android:layout_marginLeft="34dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginLeft="32dp"
         android:layout_width="316dp"
         android:layout_height="104dp"
         android:orientation="horizontal">
