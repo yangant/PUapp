@@ -25,7 +25,8 @@ public class BlankFragmentOne extends Fragment {
         TextView plaerID = (TextView) getView().findViewById(R.id.playerID);
         plaerID.setText(LogInActivity.myPlayer.getPlayer_name());
         TextView level = (TextView) getView().findViewById(R.id.level);
-        level.setText(LogInActivity.myPlayer.getLevel());
+        String lv = "LV" + LogInActivity.myPlayer.getLevel();
+        level.setText(lv);
     }
 
 }
