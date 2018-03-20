@@ -105,4 +105,8 @@ public class Player {
     public List<miniPlayer> getPlayer_charmrank() {
         return player_charmrank;
     }
+
+    public int getLevel() {
+        return 1;
+    }
 }
