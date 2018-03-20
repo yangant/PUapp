@@ -45,66 +45,66 @@ public class BlankFragmentThree extends Fragment {
             p_name_one.setText(LogInActivity.myPlayer.getPlayer_powerrank().get(0).getP_name());
             p_number_one.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_powerrank().get(0).getP_data()));
         } else {
-            p_name_one.setText("-");
-            p_number_one.setText("-");
+            p_name_one.setText(null);
+            p_number_one.setText(null);
         }
         if (LogInActivity.myPlayer.getPlayer_powerrank().size() >= 2) {
             p_name_two.setText(LogInActivity.myPlayer.getPlayer_powerrank().get(1).getP_name());
             p_number_two.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_powerrank().get(1).getP_data()));
         } else {
-            p_name_two.setText("-");
-            p_number_two.setText("-");
+            p_name_two.setText(null);
+            p_number_two.setText(null);
         }
         if (LogInActivity.myPlayer.getPlayer_powerrank().size() >= 3) {
             p_name_three.setText(LogInActivity.myPlayer.getPlayer_powerrank().get(2).getP_name());
             p_number_three.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_powerrank().get(2).getP_data()));
         } else {
-            p_name_three.setText("-");
-            p_number_three.setText("-");
+            p_name_three.setText(null);
+            p_number_three.setText(null);
         }
 
         if (LogInActivity.myPlayer.getPlayer_intelligencerank().size() >= 1) {
             i_name_one.setText(LogInActivity.myPlayer.getPlayer_intelligencerank().get(0).getP_name());
             i_number_one.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_intelligencerank().get(0).getP_data()));
         } else {
-            i_name_one.setText("-");
-            i_number_one.setText("-");
+            i_name_one.setText(null);
+            i_number_one.setText(null);
         }
         if (LogInActivity.myPlayer.getPlayer_intelligencerank().size() >= 2) {
             i_name_two.setText(LogInActivity.myPlayer.getPlayer_intelligencerank().get(1).getP_name());
             i_number_two.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_intelligencerank().get(1).getP_data()));
         } else {
-            i_name_two.setText("-");
-            i_number_two.setText("-");
+            i_name_two.setText(null);
+            i_number_two.setText(null);
         }
         if (LogInActivity.myPlayer.getPlayer_intelligencerank().size() >= 3) {
             i_name_three.setText(LogInActivity.myPlayer.getPlayer_intelligencerank().get(2).getP_name());
             i_number_three.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_intelligencerank().get(2).getP_data()));
         } else {
-            i_name_three.setText("-");
-            i_number_three.setText("-");
+            i_name_three.setText(null);
+            i_number_three.setText(null);
         }
 
         if (LogInActivity.myPlayer.getPlayer_charmrank().size() >= 1) {
             c_name_one.setText(LogInActivity.myPlayer.getPlayer_charmrank().get(0).getP_name());
             c_number_one.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_charmrank().get(0).getP_data()));
         } else {
-            c_name_one.setText("-");
-            c_number_one.setText("-");
+            c_name_one.setText(null);
+            c_number_one.setText(null);
         }
         if (LogInActivity.myPlayer.getPlayer_charmrank().size() >= 2) {
             c_name_two.setText(LogInActivity.myPlayer.getPlayer_charmrank().get(1).getP_name());
             c_number_two.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_charmrank().get(1).getP_data()));
         } else {
-            c_name_two.setText("-");
-            c_number_two.setText("-");
+            c_name_two.setText(null);
+            c_number_two.setText(null);
         }
         if (LogInActivity.myPlayer.getPlayer_charmrank().size() >= 3) {
             c_name_three.setText(LogInActivity.myPlayer.getPlayer_charmrank().get(2).getP_name());
             c_number_three.setText(Integer.toString(LogInActivity.myPlayer.getPlayer_charmrank().get(2).getP_data()));
         } else {
-            c_name_three.setText("-");
-            c_number_three.setText("-");
+            c_name_three.setText(null);
+            c_number_three.setText(null);
         }
     }
 
