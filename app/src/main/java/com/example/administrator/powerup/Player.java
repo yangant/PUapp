@@ -13,7 +13,7 @@ public class Player {
     private int player_power;
     private int player_intelligence;
     private int player_charm;
-    private List<Task> player_tasks = new ArrayList<Task>();
+    private ArrayList<Task> player_tasks = new ArrayList<Task>();
     private List<miniPlayer> player_powerrank = new ArrayList<miniPlayer>();
     private List<miniPlayer> player_intelligencerank = new ArrayList<miniPlayer>();
     private List<miniPlayer> player_charmrank = new ArrayList<miniPlayer>();
@@ -90,7 +90,7 @@ public class Player {
         return player_charm;
     }
 
-    public List<Task> getPlayer_tasks() {
+    public ArrayList<Task> getPlayer_tasks() {
         return player_tasks;
     }
 

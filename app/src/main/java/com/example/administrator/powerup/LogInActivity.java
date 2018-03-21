@@ -37,6 +37,10 @@ public class LogInActivity extends AppCompatActivity {
         myPlayer.addIntelligencerank(myself_i);
         myPlayer.addIntelligencerank(myself_i);
         myPlayer.addCharmrank(myself_c);
+        Task task_1 = new Task();
+        task_1.setTask_duration(2);
+        task_1.setTask_name("读书看报");
+        myPlayer.addTask(task_1);
         Intent intent = new Intent(LogInActivity.this, MainActivity.class);
         startActivity(intent);
     }
