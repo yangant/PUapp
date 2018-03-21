@@ -4,6 +4,7 @@ package com.example.administrator.powerup;
  * Created by Administrator on 2018/3/15 0015.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -24,6 +25,11 @@ public class BlankFragmentTwo extends Fragment {
         TaskAdapter adapter = new TaskAdapter(this.getActivity(), R.layout.task_item, LogInActivity.myPlayer.getPlayer_tasks());
         ListView listView = (ListView) getView().findViewById(R.id.listview);
         listView.setAdapter(adapter);
+    }
+
+    public void addTask(View view) {
+        Intent intent = new Intent(this.getActivity(), TaskActivity.class);
+        startActivity(intent);
     }
 
 }
