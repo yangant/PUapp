@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Button;
 
@@ -26,6 +27,13 @@ public class BlankFragmentTwo extends Fragment {
         TaskAdapter adapter = new TaskAdapter(this.getActivity(), R.layout.task_item, LogInActivity.myPlayer.getPlayer_tasks());
         ListView listView = (ListView) getView().findViewById(R.id.listview);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getActivity(), TaskActivity.class);
+                startActivity(intent);
+            }
+        });
         Button button = (Button) getView().findViewById(R.id.addbutton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
