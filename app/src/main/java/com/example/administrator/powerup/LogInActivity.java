@@ -40,7 +40,11 @@ public class LogInActivity extends AppCompatActivity {
         Task task_1 = new Task();
         task_1.setTask_duration(2);
         task_1.setTask_name("读书看报");
+        Task task_2 = new Task();
+        task_2.setTask_duration(1);
+        task_2.setTask_name("打打篮球");
         myPlayer.addTask(task_1);
+        myPlayer.addTask(task_2);
         Intent intent = new Intent(LogInActivity.this, MainActivity.class);
         startActivity(intent);
     }
