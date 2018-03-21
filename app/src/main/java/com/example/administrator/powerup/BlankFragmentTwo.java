@@ -31,6 +31,7 @@ public class BlankFragmentTwo extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getActivity(), TaskActivity.class);
+                intent.putExtra("data", i);
                 startActivity(intent);
             }
         });

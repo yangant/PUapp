@@ -20,12 +20,16 @@ public class TaskActivity extends AppCompatActivity {
     private Task newTask = new Task();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent intent = getIntent();
+        int position = intent.getIntExtra("data", 0);
+        newTask = LogInActivity.myPlayer.getPlayer_tasks().get(position);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
         Spinner spinner_style = (Spinner) findViewById(R.id.spinner_style);
         Spinner spinner_duration = (Spinner) findViewById(R.id.spinner_duration);
         tname_input = (TextView) findViewById(R.id.tname_input);
         tcontent_input = (TextView) findViewById(R.id.tcontent_input);
+        tname_input.setText(newTask.getTask_name());
     }
 
     public void addNewTask(View view) {
