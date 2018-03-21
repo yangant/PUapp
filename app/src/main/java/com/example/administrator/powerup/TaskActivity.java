@@ -30,6 +30,7 @@ public class TaskActivity extends AppCompatActivity {
         tname_input = (TextView) findViewById(R.id.tname_input);
         tcontent_input = (TextView) findViewById(R.id.tcontent_input);
         tname_input.setText(newTask.getTask_name());
+        tcontent_input.setText(newTask.getTask_content());
     }
 
     public void addNewTask(View view) {
