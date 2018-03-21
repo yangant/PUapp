@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Button;
 
 public class BlankFragmentTwo extends Fragment {
     @Nullable
@@ -25,11 +26,14 @@ public class BlankFragmentTwo extends Fragment {
         TaskAdapter adapter = new TaskAdapter(this.getActivity(), R.layout.task_item, LogInActivity.myPlayer.getPlayer_tasks());
         ListView listView = (ListView) getView().findViewById(R.id.listview);
         listView.setAdapter(adapter);
-    }
-
-    public void addTask(View view) {
-        Intent intent = new Intent(this.getActivity(), TaskActivity.class);
-        startActivity(intent);
+        Button button = (Button) getView().findViewById(R.id.addbutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TaskActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
