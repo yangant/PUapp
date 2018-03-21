@@ -31,6 +31,7 @@
                 android:layout_marginTop="5dp"/>
 
             <EditText
+                android:id="@+id/tname_input"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:background="@drawable/editbox"/>
@@ -50,6 +51,7 @@
                 android:layout_marginTop="5dp"/>
 
             <EditText
+                android:id="@+id/tcontent_input"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/editbox"/>
@@ -81,10 +83,12 @@
                         android:layout_marginTop="20dp"/>
 
                     <Spinner
+                        android:id="@+id/spinner_style"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="20dp"
-                        android:layout_marginTop="20dp"></Spinner>
+                        android:layout_marginTop="20dp"
+                        android:entries="@array/task_style"></Spinner>
 
                 </LinearLayout>
 
@@ -115,17 +119,21 @@
                         android:layout_marginTop="20dp"/>
 
                     <Spinner
+                        android:id="@+id/spinner_duration"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="20dp"
-                        android:layout_marginTop="20dp"></Spinner>
+                        android:layout_marginTop="20dp"
+                        android:entries="@array/task_duration"></Spinner>
 
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/add_button"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
+                    android:onClick="addNewTask"
                     android:text="添加任务"/>
 
             </LinearLayout>

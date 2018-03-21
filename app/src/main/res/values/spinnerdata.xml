@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="task_style">
+        <item>武力</item>
+        <item>智力 </item>
+        <item>魅力</item>
+    </string-array>
+    <string-array name="task_duration">
+        <item>0.5小时</item>
+        <item>1小时</item>
+        <item>1.5小时</item>
+        <item>2小时</item>
+    </string-array>
+</resources>
