@@ -8,12 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class BlankFragmentTwo extends Fragment {
     @Nullable
@@ -39,9 +41,14 @@ public class BlankFragmentTwo extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), TaskActivity.class);
-                intent.putExtra("data", 11);
-                startActivity(intent);
+                if (LogInActivity.myPlayer.getPlayer_tasks().size() < 10) {
+                    Intent intent = new Intent(getActivity(), TaskActivity.class);
+                    intent.putExtra("data", 11);
+                    startActivity(intent);
+                } else {
+                    Toast t = Toast.makeText(getContext(),"任务已满，请先完成任务！", Toast.LENGTH_LONG);
+                    t.show();
+                }
             }
         });
     }
