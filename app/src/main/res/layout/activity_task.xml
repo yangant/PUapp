@@ -37,6 +37,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="7dp"
                 android:layout_width="250dp"
+                android:background="@drawable/editbox"
                 android:layout_height="26dp"/>
 
         </LinearLayout>
