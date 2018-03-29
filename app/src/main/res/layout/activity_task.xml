@@ -110,7 +110,8 @@
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:text="删除任务"/>
+                    android:text="删除任务"
+                    android:onClick="removeTask"/>
 
             </LinearLayout>
 

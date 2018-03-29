@@ -62,4 +62,10 @@ public class TaskActivity extends AppCompatActivity {
         Intent intent = new Intent(TaskActivity.this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void removeTask(View view) {
+        LogInActivity.myPlayer.getPlayer_tasks().remove(po);
+        Intent intent = new Intent(TaskActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }
