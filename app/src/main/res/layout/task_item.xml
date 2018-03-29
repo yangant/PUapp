@@ -17,13 +17,16 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="任务名称"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:textColor="#FFFF"/>
 
     <TextView
         android:id="@+id/task_duration"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="2小时"
+        android:textColor="#FFFF"
+        android:fontFamily="@font/bigblack"
         android:textSize="30dp"/>
 
 </LinearLayout>
