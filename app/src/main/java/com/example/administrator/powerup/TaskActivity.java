@@ -82,6 +82,7 @@ public class TaskActivity extends AppCompatActivity {
             int mark =  LogInActivity.myPlayer.getPlayer_charm() + newTask.getTask_duration() + 1;
             LogInActivity.myPlayer.setPlayer_charm(mark);
         }
+        LogInActivity.myPlayer.getPlayer_tasks().remove(po);
         Intent intent = new Intent(TaskActivity.this, MainActivity.class);
         startActivity(intent);
     }
