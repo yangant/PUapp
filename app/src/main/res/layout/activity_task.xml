@@ -37,7 +37,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="7dp"
                 android:layout_width="250dp"
-                android:textSize="5dp"
+                android:textSize="10dp"
                 android:background="@drawable/transparent"
                 android:layout_height="26dp"/>
 
