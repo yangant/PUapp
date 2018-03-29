@@ -31,13 +31,13 @@ public class TaskActivity extends AppCompatActivity {
         Button finish_button = (Button) findViewById(R.id.finish_button);
         tname_input = (TextView) findViewById(R.id.tname_input);
         tcontent_input = (TextView) findViewById(R.id.tcontent_input);
-        tname_input.setText(newTask.getTask_name());
-        tcontent_input.setText(newTask.getTask_content());
-        spinner_style.setSelection(newTask.getTask_style());
-        spinner_duration.setSelection(newTask.getTask_duration());
         if (position < 11) {
             newTask = LogInActivity.myPlayer.getPlayer_tasks().get(position);
             add_button.setText("更改任务");
+            tname_input.setText(newTask.getTask_name());
+            tcontent_input.setText(newTask.getTask_content());
+            spinner_style.setSelection(newTask.getTask_style());
+            spinner_duration.setSelection(newTask.getTask_duration());
         } else {
             finish_button.setVisibility(0);
         }
