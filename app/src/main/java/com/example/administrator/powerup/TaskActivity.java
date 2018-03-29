@@ -28,7 +28,9 @@ public class TaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
         Spinner spinner_style = (Spinner) findViewById(R.id.spinner_style);
+        style = spinner_style.getSelectedItemPosition();
         Spinner spinner_duration = (Spinner) findViewById(R.id.spinner_duration);
+        duration = spinner_duration.getSelectedItemPosition();
         Button add_button = (Button) findViewById(R.id.add_button);
         Button finish_button = (Button) findViewById(R.id.finish_button);
         tname_input = (TextView) findViewById(R.id.tname_input);
