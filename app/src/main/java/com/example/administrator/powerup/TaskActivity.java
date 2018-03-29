@@ -20,6 +20,8 @@ public class TaskActivity extends AppCompatActivity {
     private int duration;
     private Task newTask = new Task();
     private int po;
+    private Spinner spinner_style;
+    private Spinner spinner_duration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
@@ -27,10 +29,8 @@ public class TaskActivity extends AppCompatActivity {
         po = position;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
-        Spinner spinner_style = (Spinner) findViewById(R.id.spinner_style);
-        style = spinner_style.getSelectedItemPosition();
-        Spinner spinner_duration = (Spinner) findViewById(R.id.spinner_duration);
-        duration = spinner_duration.getSelectedItemPosition();
+        spinner_style = (Spinner) findViewById(R.id.spinner_style);
+        spinner_duration = (Spinner) findViewById(R.id.spinner_duration);
         Button add_button = (Button) findViewById(R.id.add_button);
         Button finish_button = (Button) findViewById(R.id.finish_button);
         tname_input = (TextView) findViewById(R.id.tname_input);
@@ -49,6 +49,8 @@ public class TaskActivity extends AppCompatActivity {
     }
 
     public void addNewTask(View view) {
+        style = spinner_style.getSelectedItemPosition();
+        duration = spinner_duration.getSelectedItemPosition();
         newTask.setTask_name(tname_input.getText().toString());
         newTask.setTask_content(tcontent_input.getText().toString());
         newTask.setTask_duration(duration);
