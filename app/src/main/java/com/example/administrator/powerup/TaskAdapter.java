@@ -26,7 +26,8 @@ public class TaskAdapter extends ArrayAdapter{
         TextView taskName = (TextView) view.findViewById(R.id.task_name);//获取该布局内的文本视图
         TextView taskDuration = (TextView) view.findViewById(R.id.task_duration);//获取该布局内的文本视图
         taskName.setText(task.getTask_name());//为文本视图设置文本内容
-        String duration = Integer.toString(task.getTask_duration());
+        double duration_int = task.getTask_duration() * 0.5;
+        String duration = String.valueOf(duration_int);
         taskDuration.setText(duration);
         return view;
     }

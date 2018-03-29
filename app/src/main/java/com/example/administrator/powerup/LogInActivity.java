@@ -40,9 +40,13 @@ public class LogInActivity extends AppCompatActivity {
         Task task_1 = new Task();
         task_1.setTask_duration(2);
         task_1.setTask_name("读书看报");
+        task_1.setTask_content("read and look");
+        task_1.setTask_style(1);
         Task task_2 = new Task();
         task_2.setTask_duration(1);
         task_2.setTask_name("打打篮球");
+        task_2.setTask_style(0);
+        task_2.setTask_content("play basketball");
         myPlayer.addTask(task_1);
         myPlayer.addTask(task_2);
         Intent intent = new Intent(LogInActivity.this, MainActivity.class);

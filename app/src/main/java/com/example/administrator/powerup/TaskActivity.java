@@ -22,7 +22,8 @@ public class TaskActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         int position = intent.getIntExtra("data", 0);
-        newTask = LogInActivity.myPlayer.getPlayer_tasks().get(position);
+        if (position < 11)
+            newTask = LogInActivity.myPlayer.getPlayer_tasks().get(position);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
         Spinner spinner_style = (Spinner) findViewById(R.id.spinner_style);
@@ -31,6 +32,8 @@ public class TaskActivity extends AppCompatActivity {
         tcontent_input = (TextView) findViewById(R.id.tcontent_input);
         tname_input.setText(newTask.getTask_name());
         tcontent_input.setText(newTask.getTask_content());
+        spinner_style.setSelection(newTask.getTask_style());
+        spinner_duration.setSelection(newTask.getTask_duration());
     }
 
     public void addNewTask(View view) {

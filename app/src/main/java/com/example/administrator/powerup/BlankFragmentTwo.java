@@ -40,6 +40,7 @@ public class BlankFragmentTwo extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), TaskActivity.class);
+                intent.putExtra("data", 11);
                 startActivity(intent);
             }
         });
