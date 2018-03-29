@@ -1,6 +1,7 @@
 package com.example.administrator.powerup;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,12 @@ public class TaskAdapter extends ArrayAdapter{
         TextView taskDuration = (TextView) view.findViewById(R.id.task_duration);//获取该布局内的文本视图
         taskName.setText(task.getTask_name());//为文本视图设置文本内容
         double duration_int = (task.getTask_duration() + 1) * 0.5;
+        if(task.getTask_style() == 0)
+            taskImage.setImageResource(R.mipmap.wuli);
+        else if (task.getTask_style() == 1)
+            taskImage.setImageResource(R.mipmap.zhili);
+        else if (task.getTask_style() == 2)
+            taskImage.setImageResource(R.mipmap.meili);
         String duration = String.valueOf(duration_int);
         taskDuration.setText(duration);
         return view;
