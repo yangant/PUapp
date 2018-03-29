@@ -19,10 +19,12 @@ public class TaskActivity extends AppCompatActivity {
     private int style;
     private int duration;
     private Task newTask = new Task();
+    private int po;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         int position = intent.getIntExtra("data", 0);
+        po = position;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
         Spinner spinner_style = (Spinner) findViewById(R.id.spinner_style);
@@ -39,7 +41,7 @@ public class TaskActivity extends AppCompatActivity {
             spinner_style.setSelection(newTask.getTask_style());
             spinner_duration.setSelection(newTask.getTask_duration());
         } else {
-            finish_button.setVisibility(0);
+            finish_button.setVisibility(View.INVISIBLE);
         }
 
     }
@@ -49,7 +51,10 @@ public class TaskActivity extends AppCompatActivity {
         newTask.setTask_content(tcontent_input.getText().toString());
         newTask.setTask_duration(duration);
         newTask.setTask_style(style);
-        LogInActivity.myPlayer.addTask(newTask);
+        if (po < 11) {
+        } else {
+            LogInActivity.myPlayer.addTask(newTask);
+        }
         Intent intent = new Intent(TaskActivity.this, MainActivity.class);
         startActivity(intent);
     }
