@@ -27,6 +27,6 @@
         android:text="2小时"
         android:textColor="#FFFF"
         android:fontFamily="@font/bigblack"
-        android:textSize="30dp"/>
+        android:textSize="20dp"/>
 
 </LinearLayout>
