@@ -33,6 +33,7 @@ public class TaskActivity extends AppCompatActivity {
         spinner_duration = (Spinner) findViewById(R.id.spinner_duration);
         Button add_button = (Button) findViewById(R.id.add_button);
         Button finish_button = (Button) findViewById(R.id.finish_button);
+        Button delete_button = (Button) findViewById(R.id.delete_button);
         tname_input = (TextView) findViewById(R.id.tname_input);
         tcontent_input = (TextView) findViewById(R.id.tcontent_input);
         if (position < 11) {
@@ -44,6 +45,7 @@ public class TaskActivity extends AppCompatActivity {
             spinner_duration.setSelection(newTask.getTask_duration());
         } else {
             finish_button.setVisibility(View.INVISIBLE);
+            delete_button.setVisibility(View.INVISIBLE);
         }
 
     }
@@ -67,5 +69,18 @@ public class TaskActivity extends AppCompatActivity {
         LogInActivity.myPlayer.getPlayer_tasks().remove(po);
         Intent intent = new Intent(TaskActivity.this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void finishTask(View view) {
+        if (newTask.getTask_style() == 0) {
+            int mark =  LogInActivity.myPlayer.getPlayer_power() + newTask.getTask_duration() + 1;
+            LogInActivity.myPlayer.setPlayer_power(mark);
+        } else if (newTask.getTask_style() == 1) {
+            int mark =  LogInActivity.myPlayer.getPlayer_intelligence() + newTask.getTask_duration() + 1;
+            LogInActivity.myPlayer.setPlayer_intelligence(mark);
+        } else if (newTask.getTask_style() == 2) {
+            int mark =  LogInActivity.myPlayer.getPlayer_charm() + newTask.getTask_duration() + 1;
+            LogInActivity.myPlayer.setPlayer_charm(mark);
+        }
     }
 }
