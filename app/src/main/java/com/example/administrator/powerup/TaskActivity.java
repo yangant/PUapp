@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.AdapterView;
@@ -22,18 +23,25 @@ public class TaskActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         int position = intent.getIntExtra("data", 0);
-        if (position < 11)
-            newTask = LogInActivity.myPlayer.getPlayer_tasks().get(position);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
         Spinner spinner_style = (Spinner) findViewById(R.id.spinner_style);
         Spinner spinner_duration = (Spinner) findViewById(R.id.spinner_duration);
+        Button add_button = (Button) findViewById(R.id.add_button);
+        Button finish_button = (Button) findViewById(R.id.finish_button);
         tname_input = (TextView) findViewById(R.id.tname_input);
         tcontent_input = (TextView) findViewById(R.id.tcontent_input);
         tname_input.setText(newTask.getTask_name());
         tcontent_input.setText(newTask.getTask_content());
         spinner_style.setSelection(newTask.getTask_style());
         spinner_duration.setSelection(newTask.getTask_duration());
+        if (position < 11) {
+            newTask = LogInActivity.myPlayer.getPlayer_tasks().get(position);
+            add_button.setText("更改任务");
+        } else {
+            finish_button.setVisibility(0);
+        }
+
     }
 
     public void addNewTask(View view) {
