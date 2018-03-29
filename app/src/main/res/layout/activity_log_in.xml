@@ -4,23 +4,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.example.administrator.powerup.LogInActivity"
-        android:orientation="vertical">
+        android:orientation="vertical"
+    android:background="@mipmap/denglubeijing">
 
         <EditText
             android:id="@+id/input_name"
             android:layout_width="200dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:hint="输入用户名"
+            android:background="@drawable/editbox"/>
 
         <EditText
             android:id="@+id/input_password"
             android:layout_width="200dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="输入密码"
+            android:background="@drawable/editbox"/>
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="100dp"
         android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:onClick="login_click"
         android:text="登录" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:onClick="register_click"
+        android:text="注册" />
 
     </LinearLayout>

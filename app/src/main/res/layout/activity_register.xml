@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.powerup.RegisterActivity">
+    tools:context="com.example.administrator.powerup.LogInActivity"
+    android:orientation="vertical"
+    android:background="@mipmap/denglubeijing">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:hint="输入用户名"
+        android:background="@drawable/editbox"/>
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:hint="输入密码"
+        android:background="@drawable/editbox"/>
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:hint="确认密码"
+        android:background="@drawable/editbox"/>
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="注册" />
+
+</LinearLayout>

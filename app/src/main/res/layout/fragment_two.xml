@@ -3,27 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/beijing1">
-
-    <TextView
-        android:text="任务"
-        android:fontFamily="@font/bigblack"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    android:background="@mipmap/renwubeijing">
 
     <ListView
         android:id="@+id/listview"
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"></ListView>
+        android:layout_marginTop="100dp"
+        android:layout_width="360dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="350dp"></ListView>
 
     <Button
         android:id="@+id/addbutton"
         android:layout_marginTop="450dp"
         android:layout_marginLeft="150dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="添加任务"/>
 
 </FrameLayout>

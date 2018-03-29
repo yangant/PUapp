@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.powerup.TaskActivity">
+    tools:context="com.example.administrator.powerup.TaskActivity"
+    android:background="@mipmap/renwubianji">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="任务"
-            android:textSize="30dp"
-            android:textAlignment="center"/>
+            android:layout_height="0dp"
+            android:layout_weight="3"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,13 +27,17 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:text="任务名称"
+                android:textColor="#FFFF"
+                android:fontFamily="@font/bigblack"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"/>
 
             <EditText
                 android:id="@+id/tname_input"
-                android:layout_width="300dp"
-                android:layout_height="30dp"
-                android:background="@drawable/editbox"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_width="250dp"
+                android:layout_height="26dp"/>
 
         </LinearLayout>
 
@@ -42,19 +45,23 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="5"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
                 android:text="任务内容"
-                android:layout_marginTop="5dp"/>
+                android:textColor="#FFFF"
+                android:fontFamily="@font/bigblack"/>
 
             <EditText
                 android:id="@+id/tcontent_input"
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/editbox"/>
+                android:layout_width="250dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_height="match_parent"/>
 
         </LinearLayout>
 
@@ -68,6 +75,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -80,14 +88,17 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="任务类型"
+                        android:textColor="#FFFF"
+                        android:fontFamily="@font/bigblack"
                         android:layout_marginTop="20dp"/>
 
                     <Spinner
                         android:id="@+id/spinner_style"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:layout_marginTop="20dp"
+                        android:padding="0dp"
                         android:entries="@array/task_style"></Spinner>
 
                 </LinearLayout>
@@ -108,7 +119,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="70dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -116,14 +127,17 @@
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="任务时长"
+                        android:textColor="#FFFF"
+                        android:fontFamily="@font/bigblack"
                         android:layout_marginTop="20dp"/>
 
                     <Spinner
                         android:id="@+id/spinner_duration"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:layout_marginTop="20dp"
+                        android:padding="0dp"
                         android:entries="@array/task_duration"></Spinner>
 
                 </LinearLayout>
@@ -135,6 +149,12 @@
                     android:layout_gravity="center"
                     android:onClick="addNewTask"
                     android:text="添加任务"/>
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="完成任务"
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 
