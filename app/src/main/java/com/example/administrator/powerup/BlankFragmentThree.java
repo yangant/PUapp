@@ -4,14 +4,20 @@ package com.example.administrator.powerup;
  * Created by Administrator on 2018/3/15 0015.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.EditText;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 public class BlankFragmentThree extends Fragment {
     @Nullable
@@ -106,6 +112,26 @@ public class BlankFragmentThree extends Fragment {
             c_name_three.setText(null);
             c_number_three.setText(null);
         }
+        Button button = (Button) getView().findViewById(R.id.add_friend);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final EditText edt = new EditText(getContext());
+                edt.setMinLines(3);
+                new AlertDialog.Builder(getContext())
+                        .setTitle("请输入")
+                        .setIcon(android.R.drawable.ic_dialog_info)
+                        .setView(edt)
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface arg0, int arg1) {
+                                Toast t = Toast.makeText(getContext(),"任务已满，请先完成任务！", Toast.LENGTH_LONG);
+                                t.show();
+                            }
+                        })
+                        .setNegativeButton("取消", null)
+                        .show();
+            }
+        });
     }
 
 }
