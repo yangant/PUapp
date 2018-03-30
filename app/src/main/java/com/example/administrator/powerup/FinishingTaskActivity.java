@@ -24,11 +24,11 @@ public class FinishingTaskActivity extends AppCompatActivity {
         position = intent.getIntExtra("position", 0);
         style = intent.getIntExtra("style", 0);
         duration = intent.getIntExtra("duration", 0);
-        recLen = (duration + 1) * 120;
+        recLen = (duration + 1) * 60;
         txtView = (TextView)findViewById(R.id.countdowntext);
 
         Message message = handler.obtainMessage(1);     // Message
-        handler.sendMessageDelayed(message, 1000);
+        handler.sendMessageDelayed(message, 0);
     }
 
     final Handler handler = new Handler(){
@@ -37,11 +37,16 @@ public class FinishingTaskActivity extends AppCompatActivity {
             switch (msg.what) {
                 case 1:
                     recLen--;
-                    txtView.setText("距离完成任务还有" + recLen/60 + "分钟");
 
-                    if(recLen > 0){
+
+                    if(recLen > 60){
                         Message message = handler.obtainMessage(1);
                         handler.sendMessageDelayed(message, 1000);      // send message
+                        txtView.setText("距离完成任务还有" + recLen/60 + "分钟");
+                    } else if(recLen <= 60 && recLen > 0) {
+                        Message message = handler.obtainMessage(1);
+                        handler.sendMessageDelayed(message, 1000);      // send message
+                        txtView.setText("距离完成任务还有" + recLen+ "秒");
                     }else{
                         if (style == 0) {
                             int mark =  LogInActivity.myPlayer.getPlayer_power() + duration + 1;
