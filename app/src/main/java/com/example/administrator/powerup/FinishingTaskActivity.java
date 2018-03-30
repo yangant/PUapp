@@ -24,7 +24,7 @@ public class FinishingTaskActivity extends AppCompatActivity {
         position = intent.getIntExtra("position", 0);
         style = intent.getIntExtra("style", 0);
         duration = intent.getIntExtra("duration", 0);
-        recLen = (duration + 1) * 1800;
+        recLen = (duration + 1) * 120;
         txtView = (TextView)findViewById(R.id.countdowntext);
 
         Message message = handler.obtainMessage(1);     // Message
