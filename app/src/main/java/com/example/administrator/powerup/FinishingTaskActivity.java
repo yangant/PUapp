@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.os.Handler;
 import android.view.View;
@@ -24,7 +25,14 @@ public class FinishingTaskActivity extends AppCompatActivity {
         position = intent.getIntExtra("position", 0);
         style = intent.getIntExtra("style", 0);
         duration = intent.getIntExtra("duration", 0);
-        recLen = (duration + 1) * 60;
+        recLen = (duration + 1) * 1800;
+        LinearLayout mainlayout = (LinearLayout) findViewById(R.id.mainlayout);
+        if (style == 0)
+            mainlayout.setBackgroundResource(R.mipmap.wulixiulian);
+        else if (style == 1)
+            mainlayout.setBackgroundResource(R.mipmap.zhilixiulian);
+        else
+            mainlayout.setBackgroundResource(R.mipmap.meilixiulian);
         txtView = (TextView)findViewById(R.id.countdowntext);
 
         Message message = handler.obtainMessage(1);     // Message
@@ -37,7 +45,6 @@ public class FinishingTaskActivity extends AppCompatActivity {
             switch (msg.what) {
                 case 1:
                     recLen--;
-
 
                     if(recLen > 60){
                         Message message = handler.obtainMessage(1);
