@@ -72,18 +72,10 @@ public class TaskActivity extends AppCompatActivity {
     }
 
     public void finishTask(View view) {
-        if (newTask.getTask_style() == 0) {
-            int mark =  LogInActivity.myPlayer.getPlayer_power() + newTask.getTask_duration() + 1;
-            LogInActivity.myPlayer.setPlayer_power(mark);
-        } else if (newTask.getTask_style() == 1) {
-            int mark =  LogInActivity.myPlayer.getPlayer_intelligence() + newTask.getTask_duration() + 1;
-            LogInActivity.myPlayer.setPlayer_intelligence(mark);
-        } else if (newTask.getTask_style() == 2) {
-            int mark =  LogInActivity.myPlayer.getPlayer_charm() + newTask.getTask_duration() + 1;
-            LogInActivity.myPlayer.setPlayer_charm(mark);
-        }
-        LogInActivity.myPlayer.getPlayer_tasks().remove(po);
-        Intent intent = new Intent(TaskActivity.this, MainActivity.class);
+        Intent intent = new Intent(TaskActivity.this, FinishingTaskActivity.class);
+        intent.putExtra("position", po);
+        intent.putExtra("style", newTask.getTask_style());
+        intent.putExtra("duration", newTask.getTask_duration());
         startActivity(intent);
     }
 }
