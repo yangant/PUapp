@@ -51,18 +51,26 @@ public class TaskActivity extends AppCompatActivity {
     }
 
     public void addNewTask(View view) {
-        style = spinner_style.getSelectedItemPosition();
-        duration = spinner_duration.getSelectedItemPosition();
-        newTask.setTask_name(tname_input.getText().toString());
-        newTask.setTask_content(tcontent_input.getText().toString());
-        newTask.setTask_duration(duration);
-        newTask.setTask_style(style);
-        if (po < 11) {
+        if (tname_input.getText().toString().trim().isEmpty()) {
+            Toast t = Toast.makeText(this,"请输入任务名称！", Toast.LENGTH_LONG);
+            t.show();
+        } else if (tcontent_input.getText().toString().trim().isEmpty()) {
+            Toast t = Toast.makeText(this,"请输入任务内容！", Toast.LENGTH_LONG);
+            t.show();
         } else {
-            LogInActivity.myPlayer.addTask(newTask);
+            style = spinner_style.getSelectedItemPosition();
+            duration = spinner_duration.getSelectedItemPosition();
+            newTask.setTask_name(tname_input.getText().toString());
+            newTask.setTask_content(tcontent_input.getText().toString());
+            newTask.setTask_duration(duration);
+            newTask.setTask_style(style);
+            if (po < 11) {
+            } else {
+                LogInActivity.myPlayer.addTask(newTask);
+            }
+            Intent intent = new Intent(TaskActivity.this, MainActivity.class);
+            startActivity(intent);
         }
-        Intent intent = new Intent(TaskActivity.this, MainActivity.class);
-        startActivity(intent);
     }
 
     public void removeTask(View view) {
