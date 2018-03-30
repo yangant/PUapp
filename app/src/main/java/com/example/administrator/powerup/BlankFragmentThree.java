@@ -119,7 +119,7 @@ public class BlankFragmentThree extends Fragment {
                 final EditText edt = new EditText(getContext());
                 edt.setMinLines(3);
                 new AlertDialog.Builder(getContext())
-                        .setTitle("请输入")
+                        .setTitle("请输入好友名称")
                         .setIcon(android.R.drawable.ic_dialog_info)
                         .setView(edt)
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {
