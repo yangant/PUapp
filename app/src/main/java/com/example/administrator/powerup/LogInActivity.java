@@ -54,7 +54,7 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public void register_click(View v) {
-        Intent intent = new Intent(LogInActivity.this, RegisterActivity.class);
+        Intent intent = new Intent(LogInActivity.this, FinishingTaskActivity.class);
         startActivity(intent);
     }
 }
