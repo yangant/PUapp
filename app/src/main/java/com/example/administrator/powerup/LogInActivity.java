@@ -23,10 +23,10 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public void login_click(View v) {
-        if (intput_name.getText().toString() == "") {
+        if (intput_name.getText().toString() == null) {
             Toast t = Toast.makeText(this,"请输入用户名！", Toast.LENGTH_LONG);
             t.show();
-        } else if (input_password.getText().toString() == "") {
+        } else if (input_password.getText().toString() == null) {
             Toast t = Toast.makeText(this,"请输入密码！", Toast.LENGTH_LONG);
             t.show();
         } else {
