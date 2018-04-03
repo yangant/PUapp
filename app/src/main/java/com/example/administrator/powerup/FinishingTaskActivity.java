@@ -27,12 +27,12 @@ public class FinishingTaskActivity extends AppCompatActivity {
         duration = intent.getIntExtra("duration", 0);
         recLen = (duration + 1) * 1800;
         LinearLayout mainlayout = (LinearLayout) findViewById(R.id.mainlayout);
-        if (style == 0)
-            mainlayout.setBackgroundResource(R.mipmap.wulixiulian);
-        else if (style == 1)
-            mainlayout.setBackgroundResource(R.mipmap.zhilixiulian);
-        else
-            mainlayout.setBackgroundResource(R.mipmap.meilixiulian);
+        //if (style == 0)
+          //  mainlayout.setBackgroundResource(R.mipmap.wulixiulian);
+        //else if (style == 1)
+          //  mainlayout.setBackgroundResource(R.mipmap.zhilixiulian);
+        //else
+          //  mainlayout.setBackgroundResource(R.mipmap.meilixiulian);
         txtView = (TextView)findViewById(R.id.countdowntext);
 
         Message message = handler.obtainMessage(1);     // Message
