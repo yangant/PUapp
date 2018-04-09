@@ -43,7 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
         } else if (input_password.getText().toString().trim().isEmpty()) {
             Toast t = Toast.makeText(this,"请输入密码！", Toast.LENGTH_LONG);
             t.show();
-        } else if (!intput_name.getText().toString().equals(input_password.getText().toString())) {
+        } else if (!confirm_password.getText().toString().equals(input_password.getText().toString())) {
             Toast t = Toast.makeText(this,"重复密码错误！", Toast.LENGTH_LONG);
             t.show();
         } else {
