@@ -32,8 +32,16 @@ public class LogInActivity extends AppCompatActivity {
         } else {
             Connector con = new Connector();
             con.register(intput_name.getText().toString(), input_password.getText().toString());
-            Toast t = Toast.makeText(this,con.result, Toast.LENGTH_LONG);
-            t.show();
+            if(con.result == "100") {
+                Toast t = Toast.makeText(this,"用户已存在", Toast.LENGTH_LONG);
+                t.show();
+            } else if (con.result == "200") {
+                Toast t = Toast.makeText(this,"注册成功", Toast.LENGTH_LONG);
+                t.show();
+            } else if (con.result == "200") {
+                Toast t = Toast.makeText(this,"注册失败", Toast.LENGTH_LONG);
+                t.show();
+            }
             Intent intent = new Intent(LogInActivity.this, MainActivity.class);
             startActivity(intent);
         }
