@@ -92,13 +92,13 @@ public class RegisterActivity extends AppCompatActivity {
                  */
                 @Override
                 protected void onPostExecute(String s) {
-                    if(s == "100") {
+                    if(s.equals("100")) {
                         Toast t = Toast.makeText(RegisterActivity.this,"用户已存在", Toast.LENGTH_LONG);
                         t.show();
-                    } else if (s == "200") {
+                    } else if (s.equals("200")) {
                         Toast t = Toast.makeText(RegisterActivity.this,"注册成功", Toast.LENGTH_LONG);
                         t.show();
-                    } else if (s == "300") {
+                    } else if (s.equals("300")) {
                         Toast t = Toast.makeText(RegisterActivity.this,"注册失败", Toast.LENGTH_LONG);
                         t.show();
                     }
@@ -109,5 +109,5 @@ public class RegisterActivity extends AppCompatActivity {
             }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
     }
-    
+
 }
