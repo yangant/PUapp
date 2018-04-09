@@ -43,6 +43,9 @@ public class RegisterActivity extends AppCompatActivity {
         } else if (input_password.getText().toString().trim().isEmpty()) {
             Toast t = Toast.makeText(this,"请输入密码！", Toast.LENGTH_LONG);
             t.show();
+        } else if (!intput_name.getText().toString().equals(input_password.getText().toString())) {
+            Toast t = Toast.makeText(this,"重复密码错误！", Toast.LENGTH_LONG);
+            t.show();
         } else {
             new AsyncTask<String , Integer, String>(
             ){
@@ -98,12 +101,12 @@ public class RegisterActivity extends AppCompatActivity {
                     } else if (s.equals("200")) {
                         Toast t = Toast.makeText(RegisterActivity.this,"注册成功", Toast.LENGTH_LONG);
                         t.show();
+                        Intent intent = new Intent(RegisterActivity.this, LogInActivity.class);
+                        startActivity(intent);
                     } else if (s.equals("300")) {
                         Toast t = Toast.makeText(RegisterActivity.this,"注册失败", Toast.LENGTH_LONG);
                         t.show();
                     }
-                    Intent intent = new Intent(RegisterActivity.this, LogInActivity.class);
-                    startActivity(intent);
                 }
 
             }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
