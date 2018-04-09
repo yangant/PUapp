@@ -81,7 +81,7 @@ public class Connector {
     }
 
     public void register(String account, String password) {
-        String registerUrlStr = URL_Register + "?account=" + account + "&password=" + password;
+        String registerUrlStr = URL_Register + "?playerID=" + account + "&password=" + password;
         new MyAsyncTask().execute(registerUrlStr);
     }
 
