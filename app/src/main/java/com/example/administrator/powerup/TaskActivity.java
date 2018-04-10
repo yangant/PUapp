@@ -145,9 +145,67 @@ public class TaskActivity extends AppCompatActivity {
     }
 
     public void removeTask(View view) {
-        LogInActivity.myPlayer.getPlayer_tasks().remove(po);
-        Intent intent = new Intent(TaskActivity.this, MainActivity.class);
-        startActivity(intent);
+        new AsyncTask<String , Integer, String>(
+        ){
+            @Override
+            protected void onPreExecute() {
+                Log.w("WangJ", "task onPreExecute()");
+            }
+
+            /**
+             * @param params 这里的params是一个数组，即AsyncTask在激活运行是调用execute()方法传入的参数
+             */
+            @Override
+            protected String doInBackground(String... params) {
+                Log.w("WangJ", "task doInBackground()");
+                HttpURLConnection connection = null;
+                StringBuilder response = new StringBuilder();
+                try {
+                    String registerUrlStr = URL_Register + "?operation=2" + "&taskname=" + tname_input.getText().toString() + "&content=" + tcontent_input.getText().toString() + "&style=" + style + "&duration=" + duration + "&playerID=" + LogInActivity.myPlayer.getPlayer_name();
+                    URL url = new URL(registerUrlStr); // 声明一个URL,注意如果用百度首页实验，请使用https开头，否则获取不到返回报文
+                    connection = (HttpURLConnection) url.openConnection(); // 打开该URL连接
+                    connection.setRequestMethod("GET"); // 设置请求方法，“POST或GET”，我们这里用GET，在说到POST的时候再用POST
+                    connection.setConnectTimeout(80000); // 设置连接建立的超时时间
+                    connection.setReadTimeout(80000); // 设置网络报文收发超时时间
+                    InputStream in = connection.getInputStream();  // 通过连接的输入流获取下发报文，然后就是Java的流处理
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        response.append(line);
+                    }
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return response.toString(); // 这里返回的结果就作为onPostExecute方法的入参
+            }
+
+            @Override
+            protected void onProgressUpdate(Integer... values) {
+                // 如果在doInBackground方法，那么就会立刻执行本方法
+                // 本方法在UI线程中执行，可以更新UI元素，典型的就是更新进度条进度，一般是在下载时候使用
+            }
+
+            /**
+             * 运行在UI线程中，所以可以直接操作UI元素
+             * @param s
+             */
+            @Override
+            protected void onPostExecute(String s) {
+                if (s.equals("200")) {
+                    Toast t = Toast.makeText(TaskActivity.this,"删除任务成功", Toast.LENGTH_LONG);
+                    t.show();
+                    LogInActivity.myPlayer.getPlayer_tasks().remove(po);
+                    Intent intent = new Intent(TaskActivity.this, MainActivity.class);
+                    startActivity(intent);
+                } else if (s.equals("300")) {
+                    Toast t = Toast.makeText(TaskActivity.this,"删除任务失败", Toast.LENGTH_LONG);
+                    t.show();
+                }
+            }
+
+        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     public void finishTask(View view) {
