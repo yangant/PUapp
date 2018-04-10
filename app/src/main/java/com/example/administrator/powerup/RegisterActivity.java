@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText input_password;
     private EditText confirm_password;
 
-    private static String url = "http://192.168.191.2:8080/ServletTestOne/"; // IP地址请改为你自己的IP
+    private static String url = "http://192.168.191.3:8080/ServletTestOne/"; // IP地址请改为你自己的IP
 
     private static String URL_Register = url + "RegisterServlet";
 
