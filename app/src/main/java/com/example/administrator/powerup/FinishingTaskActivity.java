@@ -129,11 +129,6 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                             }
                         }
                         reader.endObject();
-                        BufferedReader Breader = new BufferedReader(new InputStreamReader(in));
-                        String line;
-                        while ((line = Breader.readLine()) != null) {
-                            response.append(line);
-                        }
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
