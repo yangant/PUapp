@@ -279,6 +279,7 @@ public class TaskActivity extends AppCompatActivity {
         intent.putExtra("content", newTask.getTask_content());
         intent.putExtra("style", newTask.getTask_style());
         intent.putExtra("duration", newTask.getTask_duration());
+        intent.putExtra("sport", 1);
         startActivity(intent);
     }
 }
