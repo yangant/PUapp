@@ -115,18 +115,18 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         connection.setConnectTimeout(80000); // 设置连接建立的超时时间
                         connection.setReadTimeout(80000); // 设置网络报文收发超时时间
                         InputStream in = connection.getInputStream();  // 通过连接的输入流获取下发报文，然后就是Java的流处理
-                        JsonReader reader = new JsonReader(new InputStreamReader(in,"utf-8"));
-                        reader.beginObject();
-                        while (reader.hasNext()) {
-                            String name = reader.nextName();
-                            loc = name;
-                            if (name.equals("formatted_address")) {
-                                loc = reader.nextString();
-                            } else {
-                                reader.skipValue();
-                            }
-                        }
-                        reader.endObject();
+                        //JsonReader reader = new JsonReader(new InputStreamReader(in,"utf-8"));
+                        //reader.beginObject();
+                        //while (reader.hasNext()) {
+                          //  String name = reader.nextName();
+                           // loc = name;
+                           // if (name.equals("formatted_address")) {
+                           //     loc = reader.nextString();
+                           // } else {
+                           //     reader.skipValue();
+                            //}
+                       // }/
+                        //reader.endObject();
                         BufferedReader Breader = new BufferedReader(new InputStreamReader(in));
                         String line;
                         while ((line = Breader.readLine()) != null) {
