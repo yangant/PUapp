@@ -43,6 +43,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
     private int sport;
     private String loc;
     private String res;
+    private String address;
 
     private static String url = "http://192.168.191.3:8080/ServletTestOne/"; // IP地址请改为你自己的IP
 
@@ -56,6 +57,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
 
         Intent intent = getIntent();
         loc = "";
+        address = "";
         position = intent.getIntExtra("position", 0);
         style = intent.getIntExtra("style", 0);
         duration = intent.getIntExtra("duration", 0);
@@ -133,6 +135,10 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         for(int j = i + 10; res.charAt(j) != '"'; j++ ) {
                             loc = loc + res.charAt(j);
                         }
+                        int y = res.indexOf("formatted_address");
+                        for(int j = y + 20; res.charAt(j) != '"'; j++ ) {
+                            address = loc + res.charAt(j);
+                        }
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
@@ -154,9 +160,14 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                  */
                 @Override
                 protected void onPostExecute(String s) {
-                    stepText.setText(loc);
-                    Toast t = Toast.makeText(FinishingTaskActivity.this, s, Toast.LENGTH_LONG);
-                    t.show();
+                    if (loc.equals("运动健身")) {
+                        stepText.setText(address);
+                    } else {
+                        Toast t = Toast.makeText(FinishingTaskActivity.this, "不在运动设施附近，无法完成任务！", Toast.LENGTH_LONG);
+                        t.show();
+                        Intent intent = new Intent(FinishingTaskActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }
                 }
 
             }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
