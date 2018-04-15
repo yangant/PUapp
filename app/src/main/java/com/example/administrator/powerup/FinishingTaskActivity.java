@@ -137,7 +137,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         }
                         int y = res.indexOf("formatted_address");
                         for(int j = y + 20; res.charAt(j) != '"'; j++ ) {
-                            address = loc + res.charAt(j);
+                            address = address + res.charAt(j);
                         }
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
