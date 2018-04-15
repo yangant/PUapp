@@ -1,7 +1,11 @@
 package com.example.administrator.powerup;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -77,10 +81,18 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
         }
 
         if(sport == 1) {
-            Location location = LocationUtils.getInstance(this).showLocation();
-            double lat = location.getLatitude();
-            double lng = location.getLongitude();
-            final String url_location = "http://api.map.baidu.com/geocoder/v2/?ak=E4805d16520de693a3fe707cdc962045&callback=renderReverse&location=" + lat + "," + lng + "&output=xml&pois=1";
+            double latitude = 0.0;
+            double longitude = 0.0;
+            LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                    || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {  //从gps获取经纬度
+                Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                if (location != null) {
+                    latitude = location.getLatitude();
+                    longitude = location.getLongitude();
+                }
+            }
+            final String url_location = "http://api.map.baidu.com/geocoder/v2/?ak=E4805d16520de693a3fe707cdc962045&callback=renderReverse&location=" + latitude + "," + longitude + "&output=xml&pois=1";
             new AsyncTask<String, Integer, String>(
             ) {
                 @Override
