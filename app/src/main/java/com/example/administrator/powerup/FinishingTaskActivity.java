@@ -92,7 +92,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                     longitude = location.getLongitude();
                 }
             }
-            final String url_location = "http://api.map.baidu.com/geocoder/v2/?ak=E4805d16520de693a3fe707cdc962045&callback=renderReverse&location=" + latitude + "," + longitude + "&output=xml&pois=1";
+            final String url_location = "http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location=" + latitude + "," + longitude + "&output=json&pois=1&ak=EgEENzGLwjIh52bHtn7HvbZ7AlSv54kl";
             new AsyncTask<String, Integer, String>(
             ) {
                 @Override
