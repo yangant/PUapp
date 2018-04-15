@@ -119,7 +119,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         reader.beginObject();
                         while (reader.hasNext()) {
                             String name = reader.nextName();
-                            if (name.equals("poiType")) {
+                            if (name.equals("formatted_address")) {
                                 loc = reader.nextString();
                             } else {
                                 reader.skipValue();
@@ -147,7 +147,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                  */
                 @Override
                 protected void onPostExecute(String s) {
-                    stepText.setText(loc);
+                    stepText.setText("asdf");
                 }
 
             }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
