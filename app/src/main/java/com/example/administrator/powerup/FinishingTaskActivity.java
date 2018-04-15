@@ -162,6 +162,8 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                 protected void onPostExecute(String s) {
                     if (loc.equals("运动健身")) {
                         stepText.setText(address);
+                        Toast t = Toast.makeText(FinishingTaskActivity.this, s, Toast.LENGTH_LONG);
+                        t.show();
                     } else {
                         Toast t = Toast.makeText(FinishingTaskActivity.this, "不在运动设施附近，无法完成任务！", Toast.LENGTH_LONG);
                         t.show();
