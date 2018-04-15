@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -84,12 +85,14 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
             double latitude = 0.0;
             double longitude = 0.0;
             LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
-                    || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {  //从gps获取经纬度
-                Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                if (location != null) {
-                    latitude = location.getLatitude();
-                    longitude = location.getLongitude();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                        || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {  //从gps获取经纬度
+                    Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                    if (location != null) {
+                        latitude = location.getLatitude();
+                        longitude = location.getLongitude();
+                    }
                 }
             }
             final String url_location = "http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location=23.064473,113.399455&output=json&pois=1&ak=EgEENzGLwjIh52bHtn7HvbZ7AlSv54kl";
@@ -115,18 +118,17 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         connection.setConnectTimeout(80000); // 设置连接建立的超时时间
                         connection.setReadTimeout(80000); // 设置网络报文收发超时时间
                         InputStream in = connection.getInputStream();  // 通过连接的输入流获取下发报文，然后就是Java的流处理
-                        //JsonReader reader = new JsonReader(new InputStreamReader(in,"utf-8"));
-                        //reader.beginObject();
-                        //while (reader.hasNext()) {
-                          //  String name = reader.nextName();
-                           // loc = name;
-                           // if (name.equals("formatted_address")) {
-                           //     loc = reader.nextString();
-                           // } else {
-                           //     reader.skipValue();
-                            //}
-                       // }/
-                        //reader.endObject();
+                        JsonReader reader = new JsonReader(new InputStreamReader(in,"utf-8"));
+                        reader.beginObject();
+                        while (reader.hasNext()) {
+                            String name = reader.nextName();
+                           if (name.equals("formatted_address")) {
+                                loc = reader.nextString();
+                            } else {
+                                reader.skipValue();
+                            }
+                        }
+                        reader.endObject();
                         BufferedReader Breader = new BufferedReader(new InputStreamReader(in));
                         String line;
                         while ((line = Breader.readLine()) != null) {
@@ -153,7 +155,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                  */
                 @Override
                 protected void onPostExecute(String s) {
-                    stepText.setText(s);
+                    stepText.setText(loc);
                     Toast t = Toast.makeText(FinishingTaskActivity.this, s, Toast.LENGTH_LONG);
                     t.show();
                 }
