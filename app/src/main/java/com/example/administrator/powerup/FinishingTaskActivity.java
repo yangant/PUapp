@@ -126,18 +126,6 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         while ((line = Breader.readLine()) != null) {
                             response.append(line);
                         }
-                        JSONObject json = null;
-                        try {
-                            /**把json字符串转换成json对象**/
-                            json = getJSON(response.getClass().toString());
-                        } catch (JSONException e1) {
-                            e1.printStackTrace();
-                        }
-                        try {
-                            loc = json.getString("poiType");
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
@@ -159,7 +147,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                  */
                 @Override
                 protected void onPostExecute(String s) {
-                    stepText.setText(loc);
+                    stepText.setText(s);
                     Toast t = Toast.makeText(FinishingTaskActivity.this, s, Toast.LENGTH_LONG);
                     t.show();
                 }
