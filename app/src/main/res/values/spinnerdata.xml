@@ -11,4 +11,8 @@
         <item>1.5小时</item>
         <item>2小时</item>
     </string-array>
+    <string-array name="sport_style">
+        <item>跑步</item>
+        <item>球类与健身</item>
+    </string-array>
 </resources>

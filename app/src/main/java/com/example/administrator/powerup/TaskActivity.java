@@ -29,8 +29,10 @@ public class TaskActivity extends AppCompatActivity {
     private int duration;
     private Task newTask = new Task();
     private int po;
+    private int s_style;
     private Spinner spinner_style;
     private Spinner spinner_duration;
+    private Spinner sport_style;
 
     private static String url = "http://192.168.191.3:8080/ServletTestOne/"; // IP地址请改为你自己的IP
 
@@ -44,6 +46,7 @@ public class TaskActivity extends AppCompatActivity {
         setContentView(R.layout.activity_task);
         spinner_style = (Spinner) findViewById(R.id.spinner_style);
         spinner_duration = (Spinner) findViewById(R.id.spinner_duration);
+        sport_style = (Spinner) findViewById(R.id.sport_style);
         Button add_button = (Button) findViewById(R.id.add_button);
         Button finish_button = (Button) findViewById(R.id.finish_button);
         Button delete_button = (Button) findViewById(R.id.delete_button);
@@ -274,12 +277,13 @@ public class TaskActivity extends AppCompatActivity {
 
     public void finishTask(View view) {
         Intent intent = new Intent(TaskActivity.this, FinishingTaskActivity.class);
+        s_style = sport_style.getSelectedItemPosition();
         intent.putExtra("position", po);
         intent.putExtra("taskname", newTask.getTask_name());
         intent.putExtra("content", newTask.getTask_content());
         intent.putExtra("style", newTask.getTask_style());
         intent.putExtra("duration", newTask.getTask_duration());
-        intent.putExtra("sport", 1);
+        intent.putExtra("sport", s_style);
         startActivity(intent);
     }
 }
