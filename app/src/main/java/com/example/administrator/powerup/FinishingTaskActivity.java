@@ -129,7 +129,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         JSONObject json = null;
                         try {
                             /**把json字符串转换成json对象**/
-                            json = getJSON(response.toString());
+                            json = getJSON(response.getClass().toString());
                         } catch (JSONException e1) {
                             e1.printStackTrace();
                         }
