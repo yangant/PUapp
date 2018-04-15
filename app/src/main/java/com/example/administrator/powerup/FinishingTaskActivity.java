@@ -130,7 +130,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         }
                         res = response.toString();
                         int i = res.indexOf("poiType");
-                        for(int j = i + 3; res.charAt(j) != '"'; j++ ) {
+                        for(int j = i + 10; res.charAt(j) != '"'; j++ ) {
                             loc = loc + res.charAt(j);
                         }
                     } catch (MalformedURLException e) {
