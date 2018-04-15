@@ -20,7 +20,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class FinishingTaskActivity extends AppCompatActivity {
+public class FinishingTaskActivity extends AppCompatActivity implements stepCallBack{
     private int recLen;
     private TextView txtView;
     private String taskname;
@@ -28,10 +28,12 @@ public class FinishingTaskActivity extends AppCompatActivity {
     private int style;
     private int position;
     private int duration;
+    private TextView stepText;
 
     private static String url = "http://192.168.191.3:8080/ServletTestOne/"; // IP地址请改为你自己的IP
 
     private static String URL_Register = url + "TaskServlet";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +55,21 @@ public class FinishingTaskActivity extends AppCompatActivity {
         //else
           //  mainlayout.setBackgroundResource(R.mipmap.meilixiulian);
         txtView = (TextView)findViewById(R.id.countdowntext);
+        stepText = (TextView)findViewById(R.id.steptext);
 
         Message message = handler.obtainMessage(1);     // Message
         handler.sendMessageDelayed(message, 0);
+
+        // 开启计步监听, 分为加速度传感器、或计步传感器
+        StepBase stepSensor = new StepSensorPedometer(this, this);
+        if (!stepSensor.registerStep()) {
+            Toast.makeText(this, "计步传传感器不可用！", Toast.LENGTH_SHORT).show();
+            stepSensor = new StepSensorAcceleration(this, this);
+            if (!stepSensor.registerStep()) {
+                Toast.makeText(this, "加速度传感器不可用！", Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
 
     final Handler handler = new Handler(){
@@ -151,4 +165,10 @@ public class FinishingTaskActivity extends AppCompatActivity {
             super.handleMessage(msg);
         }
     };
+
+    @Override
+    public void Step(int stepNum) {
+        // 计步回调
+        stepText.setText("步数:" + stepNum);
+    }
 }
