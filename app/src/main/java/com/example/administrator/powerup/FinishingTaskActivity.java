@@ -77,7 +77,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
         }
 
         if(sport == 1) {
-            Location location = LocationUtils.getInstance( FinishingTaskActivity.this ).showLocation();
+            Location location = LocationUtils.getInstance(this).showLocation();
             double lat = location.getLatitude();
             double lng = location.getLongitude();
             final String url_location = "http://api.map.baidu.com/geocoder/v2/?ak=E4805d16520de693a3fe707cdc962045&callback=renderReverse&location=" + lat + "," + lng + "&output=xml&pois=1";
