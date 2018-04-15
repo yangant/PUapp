@@ -121,6 +121,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                             String name = reader.nextName();
                             if (name.equals("formatted_address")) {
                                 loc = reader.nextString();
+                                loc = "1";
                             } else {
                                 reader.skipValue();
                             }
