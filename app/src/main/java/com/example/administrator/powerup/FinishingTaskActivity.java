@@ -154,7 +154,8 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                 @Override
                 protected void onPostExecute(String s) {
                     stepText.setText(s);
-                    System.out.println(s);
+                    Toast t = Toast.makeText(FinishingTaskActivity.this, s, Toast.LENGTH_LONG);
+                    t.show();
                 }
 
             }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
