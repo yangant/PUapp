@@ -42,6 +42,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
     private int step;
     private int sport;
     private String loc;
+    private String res;
 
     private static String url = "http://192.168.191.3:8080/ServletTestOne/"; // IP地址请改为你自己的IP
 
@@ -54,6 +55,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
         setContentView(R.layout.activity_finishing_task);
 
         Intent intent = getIntent();
+        loc = "";
         position = intent.getIntExtra("position", 0);
         style = intent.getIntExtra("style", 0);
         duration = intent.getIntExtra("duration", 0);
@@ -126,6 +128,11 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         while ((line = Breader.readLine()) != null) {
                             response.append(line);
                         }
+                        res = response.toString();
+                        int i = res.indexOf("poiType");
+                        for(int j = i + 3; res.charAt(j) != '"'; j++ ) {
+                            loc = loc + res.charAt(j);
+                        }
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
@@ -147,7 +154,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                  */
                 @Override
                 protected void onPostExecute(String s) {
-                    stepText.setText(s);
+                    stepText.setText(loc);
                     Toast t = Toast.makeText(FinishingTaskActivity.this, s, Toast.LENGTH_LONG);
                     t.show();
                 }
