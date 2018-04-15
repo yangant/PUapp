@@ -100,7 +100,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                     }
                 }
             }
-            final String url_location = "http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location=23.064473,113.399455&output=json&pois=1&ak=EgEENzGLwjIh52bHtn7HvbZ7AlSv54kl";
+            final String url_location = "http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location=23.061742,113.397238&output=json&pois=1&ak=EgEENzGLwjIh52bHtn7HvbZ7AlSv54kl";
             new AsyncTask<String, Integer, String>(
             ) {
                 @Override
