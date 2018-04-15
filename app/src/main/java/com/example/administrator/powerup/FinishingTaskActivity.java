@@ -19,6 +19,9 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -118,17 +121,23 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         connection.setConnectTimeout(80000); // 设置连接建立的超时时间
                         connection.setReadTimeout(80000); // 设置网络报文收发超时时间
                         InputStream in = connection.getInputStream();  // 通过连接的输入流获取下发报文，然后就是Java的流处理
-                        JsonReader reader = new JsonReader(new InputStreamReader(in,"utf-8"));
-                        reader.beginObject();
-                        while (reader.hasNext()) {
-                            String name = reader.nextName();
-                           if (name.equals("formatted_address")) {
-                                loc = reader.nextString();
-                            } else {
-                                reader.skipValue();
-                            }
+                        BufferedReader Breader = new BufferedReader(new InputStreamReader(in));
+                        String line;
+                        while ((line = Breader.readLine()) != null) {
+                            response.append(line);
                         }
-                        reader.endObject();
+                        JSONObject json = null;
+                        try {
+                            /**把json字符串转换成json对象**/
+                            json = getJSON(response.toString());
+                        } catch (JSONException e1) {
+                            e1.printStackTrace();
+                        }
+                        try {
+                            loc = json.getString("poiType");
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
@@ -271,5 +280,9 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
             stepText.setText("步数:" + stepNum);
             step = stepNum;
         }
+    }
+
+    public JSONObject getJSON(String sb) throws JSONException {
+        return new JSONObject(sb);
     }
 }
