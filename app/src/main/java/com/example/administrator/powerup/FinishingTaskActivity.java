@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.os.Handler;
@@ -44,6 +45,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
     private String loc;
     private String res;
     private String address;
+    private CountTimer countTimerView;
 
     private static String url = "http://192.168.191.3:8080/ServletTestOne/"; // IP地址请改为你自己的IP
 
@@ -162,8 +164,6 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                 protected void onPostExecute(String s) {
                     if (loc.equals("运动健身")) {
                         stepText.setText(address);
-                        Toast t = Toast.makeText(FinishingTaskActivity.this, s, Toast.LENGTH_LONG);
-                        t.show();
                     } else {
                         Toast t = Toast.makeText(FinishingTaskActivity.this, "不在运动设施附近，无法完成任务！", Toast.LENGTH_LONG);
                         t.show();
@@ -173,6 +173,11 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                 }
 
             }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        }
+
+        if (sport == 3) {
+            stepText.setVisibility(View.INVISIBLE);
+            init();
         }
 
     }
@@ -188,6 +193,11 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         Message message = handler.obtainMessage(1);
                         handler.sendMessageDelayed(message, 1000);      // send message
                         txtView.setText("距离完成任务还有" + recLen/60 + "分钟");
+                        if (sport == 3 && recLen%60 == 0) {
+                            countTimerView.start();
+                            stepText.setText("请点击屏幕！");
+                            stepText.setVisibility(View.VISIBLE);
+                        }
                     } else if(recLen <= 60 && recLen > 0) {
                         Message message = handler.obtainMessage(1);
                         handler.sendMessageDelayed(message, 1000);      // send message
@@ -365,5 +375,42 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
 
     public JSONObject getJSON(String sb) throws JSONException {
         return new JSONObject(sb);
+    }
+
+    private void timeStart(){
+        new Handler(getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+                countTimerView.start();
+            }
+        });
+    }
+
+    private void init() {
+        //初始化CountTimer，设置倒计时为2分钟。
+        countTimerView=new CountTimer(120000,1000,FinishingTaskActivity.this);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        switch (ev.getAction()){
+            //否则其他动作计时取消
+            default:countTimerView.cancel();
+                stepText.setVisibility(View.INVISIBLE);
+                break;
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        countTimerView.cancel();
+    }
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        timeStart();
     }
 }

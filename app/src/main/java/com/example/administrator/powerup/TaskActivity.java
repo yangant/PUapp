@@ -278,6 +278,8 @@ public class TaskActivity extends AppCompatActivity {
     public void finishTask(View view) {
         Intent intent = new Intent(TaskActivity.this, FinishingTaskActivity.class);
         s_style = sport_style.getSelectedItemPosition();
+        if(style != 0)
+            s_style = 3;
         intent.putExtra("position", po);
         intent.putExtra("taskname", newTask.getTask_name());
         intent.putExtra("content", newTask.getTask_content());
