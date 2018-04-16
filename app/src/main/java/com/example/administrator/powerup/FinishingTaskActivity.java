@@ -193,7 +193,7 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
                         Message message = handler.obtainMessage(1);
                         handler.sendMessageDelayed(message, 1000);      // send message
                         txtView.setText("距离完成任务还有" + recLen/60 + "分钟");
-                        if (sport == 3 && recLen%60 == 0) {
+                        if (sport == 3 && recLen%120 == 0) {
                             countTimerView.start();
                             stepText.setText("请点击屏幕！");
                             stepText.setVisibility(View.VISIBLE);
