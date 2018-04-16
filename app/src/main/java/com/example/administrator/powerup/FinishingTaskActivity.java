@@ -377,14 +377,14 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
         return new JSONObject(sb);
     }
 
-    private void timeStart(){
-        new Handler(getMainLooper()).post(new Runnable() {
-            @Override
-            public void run() {
-                countTimerView.start();
-            }
-        });
-    }
+    //private void timeStart(){
+     //   new Handler(getMainLooper()).post(new Runnable() {
+     //       @Override
+     //       public void run() {
+     //           countTimerView.start();
+     //       }
+     //   });
+    //}
 
     private void init() {
         //初始化CountTimer，设置倒计时为2分钟。
@@ -411,6 +411,6 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
     protected void onResume() {
 
         super.onResume();
-        timeStart();
+        //timeStart();
     }
 }
