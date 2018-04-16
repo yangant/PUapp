@@ -393,11 +393,13 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        switch (ev.getAction()){
-            //否则其他动作计时取消
-            default:countTimerView.cancel();
-                stepText.setVisibility(View.INVISIBLE);
-                break;
+        if(sport == 3) {
+            switch (ev.getAction()){
+                //否则其他动作计时取消
+                default:countTimerView.cancel();
+                    stepText.setVisibility(View.INVISIBLE);
+                    break;
+            }
         }
         return super.dispatchTouchEvent(ev);
     }
@@ -405,12 +407,14 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
     @Override
     protected void onPause() {
         super.onPause();
-        countTimerView.cancel();
+        if(sport == 3)
+            countTimerView.cancel();
     }
     @Override
     protected void onResume() {
 
         super.onResume();
-        timeStart();
+        if(sport ==3)
+            timeStart();
     }
 }
