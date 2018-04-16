@@ -175,11 +175,9 @@ public class FinishingTaskActivity extends AppCompatActivity implements stepCall
             }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
 
-        init();
-
         if (sport == 3) {
             stepText.setVisibility(View.INVISIBLE);
-
+            init();
         }
 
     }
